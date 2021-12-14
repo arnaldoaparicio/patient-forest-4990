@@ -13,7 +13,7 @@ RSpec.describe 'studios and movie titles' do
   hunt = made_up.movies.create!(title: 'Easter Egg Hunt', creation_year: 2001, genre: 'Thriller')
   visit '/studios'
 
-  save_and_open_page
+  
   expect(page).to have_content(universal.name)
   expect(page).to have_content(ark.title)
   expect(page).to have_content(shrek.title)
