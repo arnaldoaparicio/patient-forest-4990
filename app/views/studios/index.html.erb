@@ -1,1 +1,13 @@
-This is a studio
+<h1>Studios</h1>
+
+
+<% @studios.each do |studio| %>
+<p>
+<h3>Name: <%=studio.name %></h3><p>
+<h3> Located: <%= studio.location %></h3>
+<% studio.movies.each do |movie| %>
+<%= link_to movie.title, "/movies/#{movie.id}" %>
+</p>
+
+<% end %>
+<% end %>
